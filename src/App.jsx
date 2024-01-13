@@ -1,10 +1,15 @@
 import { BrowserRouter } from 'react-router-dom';
 import Router from './router/Router';
+import Menu from './components/menu/Menu';
+import Content from './components/content/Content';
 
 const App = () => {
 	return (
 		<BrowserRouter>
-			<Router></Router>
+			<Content>
+				<Menu />
+				<Router></Router>
+			</Content>
 		</BrowserRouter>
 	);
 };
