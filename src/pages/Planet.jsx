@@ -1,35 +1,46 @@
 import { v4 } from 'uuid';
-import { PLANETS_INFO, PLANETS_MENU } from '../constants/planetsInfo';
+import { PLANETS_INFO } from '../constants/planetsInfo';
+import {
+	StyledPlanet,
+	StyledPlanetButton,
+	StyledPlanetContainerImage,
+	StyledPlanetContainerInfo,
+	StyledPlanetContent,
+	StyledPlanetInfo,
+	StyledPlanetName,
+	StyledPlanetStats,
+	StyledPlanetTabs
+} from './styles';
 
 const Planet = ({ planet }) => {
 	return (
-		<div>
-			<div>
-				<div>
-					<img src='' alt='' />
-				</div>
-				<div>
+		<StyledPlanet>
+			<StyledPlanetContent>
+				<StyledPlanetContainerImage>
+					<img src={PLANETS_INFO[planet].image[0]} alt='' />
+				</StyledPlanetContainerImage>
+				<StyledPlanetContainerInfo>
 					<div>
-						<h1>Planeta</h1>
-						<h2>Info planeta</h2>
-						<span>Wikipedia</span>
+						<StyledPlanetName>{PLANETS_INFO[planet].title}</StyledPlanetName>
+						<StyledPlanetInfo>{PLANETS_INFO[planet].text[0]}</StyledPlanetInfo>
+						<span>Source: Wikipedia</span>
 					</div>
-					<div>
-						{PLANETS_MENU[planet].tabs.map((tab, index) => (
-							<button key={v4()}>{tab}</button>
+					<StyledPlanetTabs>
+						{PLANETS_INFO[planet].tabs.map((tab, index) => (
+							<StyledPlanetButton key={v4()}>{tab}</StyledPlanetButton>
 						))}
-					</div>
-				</div>
-			</div>
-			<div>
+					</StyledPlanetTabs>
+				</StyledPlanetContainerInfo>
+			</StyledPlanetContent>
+			<StyledPlanetStats>
 				{PLANETS_INFO[planet].list.map(item => (
 					<div key={item.property}>
 						<h4>{item.property}</h4>
 						<h2>{item.value}</h2>
 					</div>
 				))}
-			</div>
-		</div>
+			</StyledPlanetStats>
+		</StyledPlanet>
 	);
 };
 

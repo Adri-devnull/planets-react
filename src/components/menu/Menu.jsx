@@ -1,18 +1,20 @@
 import { Link } from 'react-router-dom';
 import { PLANETS_MENU } from '../../constants/planetsInfo';
-import { StyledMenu } from './styles';
+import { StyledLi, StyledMenu, StyledTitle, StyledUl } from './styles';
 
 const Menu = ({ action }) => {
 	return (
 		<StyledMenu>
-			<h1>THE PLANETS</h1>
-			<ul>
+			<StyledTitle>THE PLANETS</StyledTitle>
+			<StyledUl>
 				{PLANETS_MENU.map((planet, index) => (
-					<Link key={planet.id} to={planet.route} onClick={() => action(index)}>
-						{planet.name}
-					</Link>
+					<StyledLi key={planet.id}>
+						<Link to={planet.route} onClick={() => action(index)}>
+							{planet.name}
+						</Link>
+					</StyledLi>
 				))}
-			</ul>
+			</StyledUl>
 		</StyledMenu>
 	);
 };
