@@ -1,13 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
+import Planet from '../pages/Planet';
+import { PLANETS_MENU } from '../constants/planetsInfo';
 
-const Router = () => {
+const Router = ({ planet }) => {
 	return (
 		<Routes>
 			<Route
-				path='/'
-				element={<h1> Aqui es donde pondremos el componente planeta</h1>}
+				path={PLANETS_MENU[planet].route}
+				element={<Planet planet={planet} />}
 			/>
-			<Route path='/home' element={<h1>adios</h1>} />
 		</Routes>
 	);
 };
