@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import { COLORS, TYPOGRAPHYS } from '../constants/designValues';
 
 const StyledPlanet = styled.div`
-	background-color: lightblue;
-	margin: 40px 150px 0px 150px;
+	margin: 30px 150px 0px 150px;
 `;
 
 const StyledPlanetContent = styled.div`
@@ -28,6 +27,7 @@ const StyledPlanetContainerInfo = styled.div`
 
 const StyledPlanetName = styled.h1`
 	font-size: 80px;
+	font-weight: 100;
 	color: ${COLORS.title};
 	font-family: ${TYPOGRAPHYS.titlesFont};
 `;
@@ -35,7 +35,18 @@ const StyledPlanetName = styled.h1`
 const StyledPlanetInfo = styled.h2`
 	font-size: 1em;
 	line-height: 1.4em;
+	font-weight: 100;
 	font-family: ${TYPOGRAPHYS.textsFont};
+	color: ${COLORS.attenuatedText};
+`;
+
+const StyledSpan = styled.span`
+	color: ${COLORS.attenuatedText};
+`;
+
+const StyledWikipedia = styled.span`
+	color: ${COLORS.title};
+	text-decoration: underline;
 `;
 
 const StyledPlanetTabs = styled.div`
@@ -45,16 +56,46 @@ const StyledPlanetTabs = styled.div`
 `;
 
 const StyledPlanetStats = styled.div`
+	padding-top: 40px;
 	display: flex;
 	justify-content: space-evenly;
 `;
 
+const StyledPlanetStatsBoxes = styled.div`
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+	justify-content: center;
+	gap: 8px;
+	border: 1px solid grey;
+	width: 255px;
+	height: 128px;
+`;
+
 const StyledPlanetButton = styled.button`
 	border: none;
-	border: 1px solid black;
+	color: ${COLORS.title};
+	border: 1px solid ${COLORS.attenuatedText};
 	padding: 15px 10px;
 	font-family: ${TYPOGRAPHYS.textsFont};
-	font-weight: bold;
+	font-weight: 100;
+	font-size: 1.1em;
+	background-color: transparent;
+	letter-spacing: 0.2em;
+`;
+
+const StyledPlanetTitleStats = styled.h4`
+	color: ${COLORS.attenuatedText};
+	font-size: 1em;
+	font-family: ${TYPOGRAPHYS.textsFont};
+	margin: 0;
+`;
+
+const StyledPlanetInfoStats = styled.h4`
+	color: ${COLORS.title};
+	font-size: 2em;
+	font-family: ${TYPOGRAPHYS.titlesFont};
+	margin: 0;
 `;
 
 export {
@@ -66,5 +107,10 @@ export {
 	StyledPlanetStats,
 	StyledPlanetContainerImage,
 	StyledPlanetContainerInfo,
-	StyledPlanetButton
+	StyledPlanetButton,
+	StyledPlanetStatsBoxes,
+	StyledSpan,
+	StyledPlanetTitleStats,
+	StyledPlanetInfoStats,
+	StyledWikipedia
 };

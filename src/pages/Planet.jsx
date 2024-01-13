@@ -7,9 +7,14 @@ import {
 	StyledPlanetContainerInfo,
 	StyledPlanetContent,
 	StyledPlanetInfo,
+	StyledPlanetInfoStats,
 	StyledPlanetName,
 	StyledPlanetStats,
-	StyledPlanetTabs
+	StyledPlanetStatsBoxes,
+	StyledPlanetTabs,
+	StyledPlanetTitleStats,
+	StyledSpan,
+	StyledWikipedia
 } from './styles';
 
 const Planet = ({ planet }) => {
@@ -23,7 +28,9 @@ const Planet = ({ planet }) => {
 					<div>
 						<StyledPlanetName>{PLANETS_INFO[planet].title}</StyledPlanetName>
 						<StyledPlanetInfo>{PLANETS_INFO[planet].text[0]}</StyledPlanetInfo>
-						<span>Source: Wikipedia</span>
+						<StyledSpan>
+							Source: <StyledWikipedia>Wikipedia</StyledWikipedia>
+						</StyledSpan>
 					</div>
 					<StyledPlanetTabs>
 						{PLANETS_INFO[planet].tabs.map((tab, index) => (
@@ -33,11 +40,11 @@ const Planet = ({ planet }) => {
 				</StyledPlanetContainerInfo>
 			</StyledPlanetContent>
 			<StyledPlanetStats>
-				{PLANETS_INFO[planet].list.map(item => (
-					<div key={item.property}>
-						<h4>{item.property}</h4>
-						<h2>{item.value}</h2>
-					</div>
+				{PLANETS_INFO[planet].stats.map(item => (
+					<StyledPlanetStatsBoxes key={item.property}>
+						<StyledPlanetTitleStats>{item.property}</StyledPlanetTitleStats>
+						<StyledPlanetInfoStats>{item.value}</StyledPlanetInfoStats>
+					</StyledPlanetStatsBoxes>
 				))}
 			</StyledPlanetStats>
 		</StyledPlanet>

@@ -59,11 +59,11 @@ export const PLANETS_INFO = [
 			`Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.`
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
-		list: [
-			{ property: 'rotation', value: '58.6 days' },
-			{ property: 'revolution', value: '87.97 days' },
-			{ property: 'radius', value: '2,439.7 km' },
-			{ property: 'average', value: '430°c' }
+		stats: [
+			{ property: 'ROTATION TIME', value: '58.6 days' },
+			{ property: 'REVOLUTION TIME', value: '87.97 days' },
+			{ property: 'RADIUS', value: '2,439.7 km' },
+			{ property: 'AVERAGE TEMP.', value: '430°c' }
 		]
 	},
 	{
@@ -81,11 +81,11 @@ export const PLANETS_INFO = [
 			`Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii.`
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
-		list: [
-			{ property: 'rotation', value: '243 days' },
-			{ property: 'revolution', value: '224.7 days' },
-			{ property: 'radius', value: '6,051.8 km' },
-			{ property: 'average', value: '471°c' }
+		stats: [
+			{ property: 'ROTATION TIME', value: '243 days' },
+			{ property: 'REVOLUTION TIME', value: '224.7 days' },
+			{ property: 'RADIUS', value: '6,051.8 km' },
+			{ property: 'AVERAGE TEMP.', value: '471°c' }
 		]
 	},
 	{
@@ -103,11 +103,11 @@ export const PLANETS_INFO = [
 			`The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.`
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
-		list: [
-			{ property: 'rotation', value: '0.99 days' },
-			{ property: 'revolution', value: '365.26 days' },
-			{ property: 'radius', value: '6,371 KM' },
-			{ property: 'average', value: '16°c' }
+		stats: [
+			{ property: 'ROTATION TIME', value: '0.99 days' },
+			{ property: 'REVOLUTION TIME', value: '365.26 days' },
+			{ property: 'RADIUS', value: '6,371 KM' },
+			{ property: 'AVERAGE TEMP.', value: '16°c' }
 		]
 	},
 	{
@@ -125,11 +125,11 @@ export const PLANETS_INFO = [
 			`Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.`
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
-		list: [
-			{ property: 'rotation', value: '1.88 years' },
-			{ property: 'revolution', value: '365.26 days' },
-			{ property: 'radius', value: '3,389.5 km' },
-			{ property: 'average', value: '−28°c' }
+		stats: [
+			{ property: 'ROTATION TIME', value: '1.88 years' },
+			{ property: 'REVOLUTION TIME', value: '365.26 days' },
+			{ property: 'RADIUS', value: '3,389.5 km' },
+			{ property: 'AVERAGE TEMP.', value: '−28°c' }
 		]
 	},
 	{
@@ -147,11 +147,11 @@ export const PLANETS_INFO = [
 			`The best known feature of Jupiter is the Great Red Spot, a persistent anticyclonic storm located 22° south of the equator. It is known to have existed since at least 1831, and possibly since 1665.`
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
-		list: [
-			{ property: 'rotation', value: '9.93 hours' },
-			{ property: 'revolution', value: '11.86 years' },
-			{ property: 'radius', value: '69,911 km' },
-			{ property: 'average', value: '-108°c' }
+		stats: [
+			{ property: 'ROTATION TIME', value: '9.93 hours' },
+			{ property: 'REVOLUTION TIME', value: '11.86 years' },
+			{ property: 'RADIUS', value: '69,911 km' },
+			{ property: 'AVERAGE TEMP.', value: '-108°c' }
 		]
 	},
 	{
@@ -169,11 +169,11 @@ export const PLANETS_INFO = [
 			`The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles with a smaller amount of rocky debris and dust. `
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
-		list: [
-			{ property: 'rotation', value: '10.8 hours' },
-			{ property: 'revolution', value: '29.46 years' },
-			{ property: 'radius', value: '58,232 km' },
-			{ property: 'average', value: '-138°c' }
+		stats: [
+			{ property: 'ROTATION TIME', value: '10.8 hours' },
+			{ property: 'REVOLUTION TIME', value: '29.46 years' },
+			{ property: 'RADIUS', value: '58,232 km' },
+			{ property: 'AVERAGE TEMP.', value: '-138°c' }
 		]
 	},
 	{
@@ -191,11 +191,11 @@ export const PLANETS_INFO = [
 			`The composition of Uranus's atmosphere is different from its bulk, consisting mainly of molecular hydrogen and helium. The helium molar fraction, i.e. the number of helium atoms per molecule of gas, is 0.15±0.03 in the upper troposphere.`
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
-		list: [
-			{ property: 'rotation', value: '17.2 hours' },
-			{ property: 'revolution', value: '84 years' },
-			{ property: 'radius', value: '25,362 km' },
-			{ property: 'average', value: '-195°c' }
+		stats: [
+			{ property: 'ROTATION TIME', value: '17.2 hours' },
+			{ property: 'REVOLUTION TIME', value: '84 years' },
+			{ property: 'RADIUS', value: '25,362 km' },
+			{ property: 'AVERAGE TEMP.', value: '-195°c' }
 		]
 	},
 	{
@@ -213,11 +213,11 @@ export const PLANETS_INFO = [
 			`Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in the red and infrared portion of the spectrum.`
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
-		list: [
-			{ property: 'rotation', value: '16.08 hours' },
-			{ property: 'revolution', value: '164.79 years' },
-			{ property: 'radius', value: '24,622 km' },
-			{ property: 'average', value: '-201°c' }
+		stats: [
+			{ property: 'ROTATION TIME', value: '16.08 hours' },
+			{ property: 'REVOLUTION TIME', value: '164.79 years' },
+			{ property: 'RADIUS', value: '24,622 km' },
+			{ property: 'AVERAGE TEMP.', value: '-201°c' }
 		]
 	}
 ];
