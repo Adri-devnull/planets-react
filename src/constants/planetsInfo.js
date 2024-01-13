@@ -46,7 +46,6 @@ export const PLANETS_MENU = [
 export const PLANETS_INFO = [
 	{
 		title: 'MERCURY',
-		size: '6.9375rem',
 		image: [
 			'./public/assets/images/planet-mercury.svg',
 			'./public/assets/images/planet-mercury-internal.svg',
@@ -68,7 +67,6 @@ export const PLANETS_INFO = [
 	},
 	{
 		title: 'VENUS',
-		size: '9.625rem',
 		image: [
 			'./public/assets/images/planet-venus.svg',
 			'./public/assets/images/planet-venus-internal.svg',
@@ -90,7 +88,6 @@ export const PLANETS_INFO = [
 	},
 	{
 		title: 'EARTH',
-		size: '10.8125rem',
 		image: [
 			'./public/assets/images/planet-earth.svg',
 			'./public/assets/images/planet-earth-internal.svg',
@@ -112,7 +109,6 @@ export const PLANETS_INFO = [
 	},
 	{
 		title: 'MARS',
-		size: '8.0625rem',
 		image: [
 			'./public/assets/images/planet-mars.svg',
 			'./public/assets/images/planet-mars-internal.svg',
@@ -134,7 +130,6 @@ export const PLANETS_INFO = [
 	},
 	{
 		title: 'JUPITER',
-		size: '14rem',
 		image: [
 			'./public/assets/images/planet-jupiter.svg',
 			'./public/assets/images/planet-jupiter-internal.svg',
@@ -156,7 +151,6 @@ export const PLANETS_INFO = [
 	},
 	{
 		title: 'SATURN',
-		size: '14rem',
 		image: [
 			'./public/assets/images/planet-saturn.svg',
 			'./public/assets/images/planet-saturn-internal.svg',
@@ -178,7 +172,6 @@ export const PLANETS_INFO = [
 	},
 	{
 		title: 'URANUS',
-		size: '11rem',
 		image: [
 			'./public/assets/images/planet-uranus.svg',
 			'./public/assets/images/planet-uranus-internal.svg',
@@ -200,7 +193,6 @@ export const PLANETS_INFO = [
 	},
 	{
 		title: 'NEPTUNE',
-		size: '10.8125rem',
 		image: [
 			'./public/assets/images/planet-neptune.svg',
 			'./public/assets/images/planet-neptune-internal.svg',

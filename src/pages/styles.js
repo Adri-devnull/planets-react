@@ -14,6 +14,7 @@ const StyledPlanetContainerImage = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 60%;
+	position: relative;
 `;
 
 const StyledPlanetContainerInfo = styled.div`
@@ -47,6 +48,7 @@ const StyledSpan = styled.span`
 const StyledWikipedia = styled.span`
 	color: ${COLORS.title};
 	text-decoration: underline;
+	cursor: pointer;
 `;
 
 const StyledPlanetTabs = styled.div`
@@ -82,6 +84,7 @@ const StyledPlanetButton = styled.button`
 	font-size: 1.1em;
 	background-color: transparent;
 	letter-spacing: 0.2em;
+	cursor: pointer;
 `;
 
 const StyledPlanetTitleStats = styled.h4`
@@ -98,6 +101,15 @@ const StyledPlanetInfoStats = styled.h4`
 	margin: 0;
 `;
 
+const StyledHiddenImage = styled.div`
+	display: ${({ visibility }) => (visibility ? 'flex' : 'none')};
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	left: 404px;
+	top: 405px;
+`;
+
 export {
 	StyledPlanet,
 	StyledPlanetContent,
@@ -112,5 +124,6 @@ export {
 	StyledSpan,
 	StyledPlanetTitleStats,
 	StyledPlanetInfoStats,
-	StyledWikipedia
+	StyledWikipedia,
+	StyledHiddenImage
 };

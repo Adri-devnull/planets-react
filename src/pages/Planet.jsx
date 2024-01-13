@@ -1,6 +1,7 @@
 import { v4 } from 'uuid';
 import { PLANETS_INFO } from '../constants/planetsInfo';
 import {
+	StyledHiddenImage,
 	StyledPlanet,
 	StyledPlanetButton,
 	StyledPlanetContainerImage,
@@ -16,25 +17,40 @@ import {
 	StyledSpan,
 	StyledWikipedia
 } from './styles';
+import { useState } from 'react';
 
 const Planet = ({ planet }) => {
+	const [info, setInfo] = useState(0);
+	const [lastImage, setLastImage] = useState(false);
 	return (
 		<StyledPlanet>
 			<StyledPlanetContent>
 				<StyledPlanetContainerImage>
-					<img src={PLANETS_INFO[planet].image[0]} alt='' />
+					<img src={PLANETS_INFO[planet].image[info]} alt='' />
+					<StyledHiddenImage visibility={lastImage}>
+						<img src={PLANETS_INFO[planet].image[3]} alt='' />
+					</StyledHiddenImage>
 				</StyledPlanetContainerImage>
 				<StyledPlanetContainerInfo>
 					<div>
 						<StyledPlanetName>{PLANETS_INFO[planet].title}</StyledPlanetName>
-						<StyledPlanetInfo>{PLANETS_INFO[planet].text[0]}</StyledPlanetInfo>
+						<StyledPlanetInfo>
+							{PLANETS_INFO[planet].text[info]}
+						</StyledPlanetInfo>
 						<StyledSpan>
 							Source: <StyledWikipedia>Wikipedia</StyledWikipedia>
 						</StyledSpan>
 					</div>
 					<StyledPlanetTabs>
 						{PLANETS_INFO[planet].tabs.map((tab, index) => (
-							<StyledPlanetButton key={v4()}>{tab}</StyledPlanetButton>
+							<StyledPlanetButton
+								key={v4()}
+								onClick={() =>
+									changeIndexInfo(setInfo, index, setLastImage, lastImage)
+								}
+							>
+								{tab}
+							</StyledPlanetButton>
 						))}
 					</StyledPlanetTabs>
 				</StyledPlanetContainerInfo>
@@ -49,6 +65,15 @@ const Planet = ({ planet }) => {
 			</StyledPlanetStats>
 		</StyledPlanet>
 	);
+};
+
+const changeIndexInfo = (setInfo, index, setLastImage, lastImage) => {
+	setInfo(index);
+	if (index === 2) {
+		setLastImage(!lastImage);
+	} else {
+		setLastImage(false);
+	}
 };
 
 export default Planet;
