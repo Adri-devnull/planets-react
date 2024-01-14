@@ -43,12 +43,14 @@ const StyledPlanetInfo = styled.h2`
 
 const StyledSpan = styled.span`
 	color: ${COLORS.attenuatedText};
+	font-family: ${TYPOGRAPHYS.textsFont};
 `;
 
 const StyledWikipedia = styled.span`
 	color: ${COLORS.title};
 	text-decoration: underline;
 	cursor: pointer;
+	font-family: ${TYPOGRAPHYS.textsFont};
 `;
 
 const StyledPlanetTabs = styled.div`
@@ -85,6 +87,7 @@ const StyledPlanetButton = styled.button`
 	background-color: transparent;
 	letter-spacing: 0.2em;
 	cursor: pointer;
+	background-color: ${({ $active }) => ($active ? 'red' : 'transparent')};
 `;
 
 const StyledPlanetTitleStats = styled.h4`

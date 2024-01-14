@@ -46,7 +46,7 @@ export const PLANETS_MENU = [
 export const PLANETS_INFO = [
 	{
 		title: 'MERCURY',
-		image: [
+		images: [
 			'./public/assets/images/planet-mercury.svg',
 			'./public/assets/images/planet-mercury-internal.svg',
 			'./public/assets/images/planet-mercury.svg',
@@ -59,15 +59,15 @@ export const PLANETS_INFO = [
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
 		stats: [
-			{ property: 'ROTATION TIME', value: '58.6 days' },
-			{ property: 'REVOLUTION TIME', value: '87.97 days' },
-			{ property: 'RADIUS', value: '2,439.7 km' },
-			{ property: 'AVERAGE TEMP.', value: '430°c' }
+			{ props: 'ROTATION TIME', value: '58.6 DAYS' },
+			{ props: 'REVOLUTION TIME', value: '87.97 DAYS' },
+			{ props: 'RADIUS', value: '2,439.7 KM' },
+			{ props: 'AVERAGE TEMP.', value: '430°C' }
 		]
 	},
 	{
 		title: 'VENUS',
-		image: [
+		images: [
 			'./public/assets/images/planet-venus.svg',
 			'./public/assets/images/planet-venus-internal.svg',
 			'./public/assets/images/planet-venus.svg',
@@ -80,15 +80,15 @@ export const PLANETS_INFO = [
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
 		stats: [
-			{ property: 'ROTATION TIME', value: '243 days' },
-			{ property: 'REVOLUTION TIME', value: '224.7 days' },
-			{ property: 'RADIUS', value: '6,051.8 km' },
-			{ property: 'AVERAGE TEMP.', value: '471°c' }
+			{ props: 'ROTATION TIME', value: '243 DAYS' },
+			{ props: 'REVOLUTION TIME', value: '224.7 DAYS' },
+			{ props: 'RADIUS', value: '6,051.8 KM' },
+			{ props: 'AVERAGE TEMP.', value: '471°C' }
 		]
 	},
 	{
 		title: 'EARTH',
-		image: [
+		images: [
 			'./public/assets/images/planet-earth.svg',
 			'./public/assets/images/planet-earth-internal.svg',
 			'./public/assets/images/planet-earth.svg',
@@ -101,15 +101,15 @@ export const PLANETS_INFO = [
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
 		stats: [
-			{ property: 'ROTATION TIME', value: '0.99 days' },
-			{ property: 'REVOLUTION TIME', value: '365.26 days' },
-			{ property: 'RADIUS', value: '6,371 KM' },
-			{ property: 'AVERAGE TEMP.', value: '16°c' }
+			{ props: 'ROTATION TIME', value: '0.99 DAYS' },
+			{ props: 'REVOLUTION TIME', value: '365.26 DAYS' },
+			{ props: 'RADIUS', value: '6,371 KM' },
+			{ props: 'AVERAGE TEMP.', value: '16°C' }
 		]
 	},
 	{
 		title: 'MARS',
-		image: [
+		images: [
 			'./public/assets/images/planet-mars.svg',
 			'./public/assets/images/planet-mars-internal.svg',
 			'./public/assets/images/planet-mars.svg',
@@ -122,15 +122,15 @@ export const PLANETS_INFO = [
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
 		stats: [
-			{ property: 'ROTATION TIME', value: '1.88 years' },
-			{ property: 'REVOLUTION TIME', value: '365.26 days' },
-			{ property: 'RADIUS', value: '3,389.5 km' },
-			{ property: 'AVERAGE TEMP.', value: '−28°c' }
+			{ props: 'ROTATION TIME', value: '1.03 DAYS' },
+			{ props: 'REVOLUTION TIME', value: '1.88 YEARS' },
+			{ props: 'RADIUS', value: '3,389.5 KM' },
+			{ props: 'AVERAGE TEMP.', value: '−28°C' }
 		]
 	},
 	{
 		title: 'JUPITER',
-		image: [
+		images: [
 			'./public/assets/images/planet-jupiter.svg',
 			'./public/assets/images/planet-jupiter-internal.svg',
 			'./public/assets/images/planet-jupiter.svg',
@@ -143,15 +143,15 @@ export const PLANETS_INFO = [
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
 		stats: [
-			{ property: 'ROTATION TIME', value: '9.93 hours' },
-			{ property: 'REVOLUTION TIME', value: '11.86 years' },
-			{ property: 'RADIUS', value: '69,911 km' },
-			{ property: 'AVERAGE TEMP.', value: '-108°c' }
+			{ props: 'ROTATION TIME', value: '9.93 HOURS' },
+			{ props: 'REVOLUTION TIME', value: '11.86 YEARS' },
+			{ props: 'RADIUS', value: '69,911 KM' },
+			{ props: 'AVERAGE TEMP.', value: '-108°C' }
 		]
 	},
 	{
 		title: 'SATURN',
-		image: [
+		images: [
 			'./public/assets/images/planet-saturn.svg',
 			'./public/assets/images/planet-saturn-internal.svg',
 			'./public/assets/images/planet-saturn.svg',
@@ -164,15 +164,15 @@ export const PLANETS_INFO = [
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
 		stats: [
-			{ property: 'ROTATION TIME', value: '10.8 hours' },
-			{ property: 'REVOLUTION TIME', value: '29.46 years' },
-			{ property: 'RADIUS', value: '58,232 km' },
-			{ property: 'AVERAGE TEMP.', value: '-138°c' }
+			{ props: 'ROTATION TIME', value: '10.8 HOURS' },
+			{ props: 'REVOLUTION TIME', value: '29.46 YEARS' },
+			{ props: 'RADIUS', value: '58,232 KM' },
+			{ props: 'AVERAGE TEMP.', value: '-138°C' }
 		]
 	},
 	{
 		title: 'URANUS',
-		image: [
+		images: [
 			'./public/assets/images/planet-uranus.svg',
 			'./public/assets/images/planet-uranus-internal.svg',
 			'./public/assets/images/planet-uranus.svg',
@@ -185,15 +185,15 @@ export const PLANETS_INFO = [
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
 		stats: [
-			{ property: 'ROTATION TIME', value: '17.2 hours' },
-			{ property: 'REVOLUTION TIME', value: '84 years' },
-			{ property: 'RADIUS', value: '25,362 km' },
-			{ property: 'AVERAGE TEMP.', value: '-195°c' }
+			{ props: 'ROTATION TIME', value: '17.2 HOURS' },
+			{ props: 'REVOLUTION TIME', value: '84 YEARS' },
+			{ props: 'RADIUS', value: '25,362 KM' },
+			{ props: 'AVERAGE TEMP.', value: '-195°C' }
 		]
 	},
 	{
 		title: 'NEPTUNE',
-		image: [
+		images: [
 			'./public/assets/images/planet-neptune.svg',
 			'./public/assets/images/planet-neptune-internal.svg',
 			'./public/assets/images/planet-neptune.svg',
@@ -206,10 +206,10 @@ export const PLANETS_INFO = [
 		],
 		tabs: ['OVERVIEW', 'INTERNAL STRUCTURE', 'SURFACE GEOLOGY'],
 		stats: [
-			{ property: 'ROTATION TIME', value: '16.08 hours' },
-			{ property: 'REVOLUTION TIME', value: '164.79 years' },
-			{ property: 'RADIUS', value: '24,622 km' },
-			{ property: 'AVERAGE TEMP.', value: '-201°c' }
+			{ props: 'ROTATION TIME', value: '16.08 HOURS' },
+			{ props: 'REVOLUTION TIME', value: '164.79 YEARS' },
+			{ props: 'RADIUS', value: '24,622 KM' },
+			{ props: 'AVERAGE TEMP.', value: '-201°C' }
 		]
 	}
 ];

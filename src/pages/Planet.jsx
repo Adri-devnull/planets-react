@@ -26,9 +26,9 @@ const Planet = ({ planet }) => {
 		<StyledPlanet>
 			<StyledPlanetContent>
 				<StyledPlanetContainerImage>
-					<img src={PLANETS_INFO[planet].image[info]} alt='' />
+					<img src={PLANETS_INFO[planet].images[info]} alt='' />
 					<StyledHiddenImage visibility={lastImage}>
-						<img src={PLANETS_INFO[planet].image[3]} alt='' />
+						<img src={PLANETS_INFO[planet].images[3]} alt='' />
 					</StyledHiddenImage>
 				</StyledPlanetContainerImage>
 				<StyledPlanetContainerInfo>
@@ -48,6 +48,7 @@ const Planet = ({ planet }) => {
 								onClick={() =>
 									changeIndexInfo(setInfo, index, setLastImage, lastImage)
 								}
+								$active={index === info}
 							>
 								{tab}
 							</StyledPlanetButton>
@@ -57,8 +58,8 @@ const Planet = ({ planet }) => {
 			</StyledPlanetContent>
 			<StyledPlanetStats>
 				{PLANETS_INFO[planet].stats.map(item => (
-					<StyledPlanetStatsBoxes key={item.property}>
-						<StyledPlanetTitleStats>{item.property}</StyledPlanetTitleStats>
+					<StyledPlanetStatsBoxes key={item.props}>
+						<StyledPlanetTitleStats>{item.props}</StyledPlanetTitleStats>
 						<StyledPlanetInfoStats>{item.value}</StyledPlanetInfoStats>
 					</StyledPlanetStatsBoxes>
 				))}
