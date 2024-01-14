@@ -18,6 +18,7 @@ import {
 	StyledWikipedia
 } from './styles';
 import { useState } from 'react';
+import { TABS_COLORS } from '../constants/designValues';
 
 const Planet = ({ planet }) => {
 	const [info, setInfo] = useState(0);
@@ -49,6 +50,7 @@ const Planet = ({ planet }) => {
 									changeIndexInfo(setInfo, index, setLastImage, lastImage)
 								}
 								$active={index === info}
+								$color={TABS_COLORS[planet]}
 							>
 								{tab}
 							</StyledPlanetButton>

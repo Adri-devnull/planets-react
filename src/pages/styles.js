@@ -87,7 +87,8 @@ const StyledPlanetButton = styled.button`
 	background-color: transparent;
 	letter-spacing: 0.2em;
 	cursor: pointer;
-	background-color: ${({ $active }) => ($active ? 'red' : 'transparent')};
+	background-color: ${({ $active, $color }) =>
+		$active ? $color : 'transparent'};
 `;
 
 const StyledPlanetTitleStats = styled.h4`
