@@ -7,7 +7,8 @@ export const COLORS = {
 	title: '#FFFFFF',
 	text: '#FFFFFF',
 	attenuatedText: '#838391',
-	background: '#070724'
+	background: '#070724',
+	hoverColor: '#2b3143'
 };
 
 export const TABS_COLORS = [

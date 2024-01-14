@@ -34,9 +34,11 @@ const Planet = ({ planet }) => {
 				</StyledPlanetContainerImage>
 				<StyledPlanetContainerInfo>
 					<div>
-						<StyledPlanetName>{PLANETS_INFO[planet].title}</StyledPlanetName>
+						<StyledPlanetName>
+							{PLANETS_INFO[planet].planetName}
+						</StyledPlanetName>
 						<StyledPlanetInfo>
-							{PLANETS_INFO[planet].text[info]}
+							{PLANETS_INFO[planet].texts[info]}
 						</StyledPlanetInfo>
 						<StyledSpan>
 							Source: <StyledWikipedia>Wikipedia</StyledWikipedia>

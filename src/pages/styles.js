@@ -34,7 +34,7 @@ const StyledPlanetName = styled.h1`
 `;
 
 const StyledPlanetInfo = styled.h2`
-	font-size: 1em;
+	font-size: 1.1em;
 	line-height: 1.4em;
 	font-weight: 100;
 	font-family: ${TYPOGRAPHYS.textsFont};
@@ -79,8 +79,9 @@ const StyledPlanetStatsBoxes = styled.div`
 const StyledPlanetButton = styled.button`
 	border: none;
 	color: ${COLORS.title};
+	text-align: left;
 	border: 1px solid ${COLORS.attenuatedText};
-	padding: 15px 10px;
+	padding: 15px 25px;
 	font-family: ${TYPOGRAPHYS.textsFont};
 	font-weight: 100;
 	font-size: 1.1em;
@@ -89,6 +90,10 @@ const StyledPlanetButton = styled.button`
 	cursor: pointer;
 	background-color: ${({ $active, $color }) =>
 		$active ? $color : 'transparent'};
+	&:hover {
+		background-color: ${({ $active, $color }) =>
+			!$active ? `${COLORS.hoverColor}` : $color};
+	}
 `;
 
 const StyledPlanetTitleStats = styled.h4`

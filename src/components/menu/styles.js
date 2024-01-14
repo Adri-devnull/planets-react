@@ -13,12 +13,28 @@ const StyledMenu = styled.nav`
 const StyledUl = styled.ul`
 	display: flex;
 	list-style: none;
-	gap: 25px;
+	gap: 50px;
 `;
 
 const StyledLi = styled.li`
-	:visited {
-		color: ${COLORS.title};
+	font-size: 0.9em;
+	position: relative;
+	display: block;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -32px;
+		left: 0;
+		width: 100%;
+		height: 6px;
+		background-color: ${({ $color }) => $color};
+		transition: transform 0.1s ease;
+		transform: scaleX(0);
+	}
+
+	&:hover::before {
+		transform: scaleX(1.3);
 	}
 `;
 
