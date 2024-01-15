@@ -2,13 +2,16 @@ import { Route, Routes } from 'react-router-dom';
 import Planet from '../pages/Planet';
 import { PLANETS_MENU } from '../constants/planetsInfo';
 
-const Router = ({ planet }) => {
+const Router = () => {
 	return (
 		<Routes>
-			<Route
-				path={PLANETS_MENU[planet].route}
-				element={<Planet planet={planet} />}
-			/>
+			{PLANETS_MENU.map(planet => (
+				<Route
+					key={planet.id}
+					path={planet.route}
+					element={<Planet planet={planet.name} />}
+				/>
+			))}
 		</Routes>
 	);
 };

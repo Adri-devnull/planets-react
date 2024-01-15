@@ -14,16 +14,19 @@ const StyledPlanetContainerImage = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 60%;
+	max-width: 600px;
 	position: relative;
+	left: 200px;
 `;
 
 const StyledPlanetContainerInfo = styled.div`
-	width: 30%;
+	width: 40%;
 	padding: 0px 70px;
 	height: 650px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	margin-left: auto;
 `;
 
 const StyledPlanetName = styled.h1`
@@ -68,12 +71,11 @@ const StyledPlanetStats = styled.div`
 const StyledPlanetStatsBoxes = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding-left: 30px;
+	padding: 20px 30px;
 	justify-content: center;
 	gap: 8px;
 	border: 1px solid grey;
 	width: 255px;
-	height: 128px;
 `;
 
 const StyledPlanetButton = styled.button`
@@ -111,12 +113,15 @@ const StyledPlanetInfoStats = styled.h4`
 `;
 
 const StyledHiddenImage = styled.div`
-	display: ${({ visibility }) => (visibility ? 'flex' : 'none')};
 	position: absolute;
-	width: 200px;
-	height: 200px;
-	left: 404px;
+	width: 150px;
+	left: 50%;
 	top: 405px;
+	transform: translateX(-50%);
+`;
+
+const StyledContainerPlanetInfo = styled.div`
+	display: flex;
 `;
 
 export {
@@ -134,5 +139,6 @@ export {
 	StyledPlanetTitleStats,
 	StyledPlanetInfoStats,
 	StyledWikipedia,
-	StyledHiddenImage
+	StyledHiddenImage,
+	StyledContainerPlanetInfo
 };

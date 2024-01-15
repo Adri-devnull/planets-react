@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { COLORS, TYPOGRAPHYS } from '../../constants/designValues';
+import { Link } from 'react-router-dom';
 
 const StyledMenu = styled.nav`
 	display: flex;
@@ -43,4 +44,9 @@ const StyledTitle = styled.h1`
 	font-size: 28px;
 `;
 
-export { StyledMenu, StyledUl, StyledTitle, StyledLi };
+const StyledLink = styled(Link)`
+	text-decoration: none;
+	color: #fff;
+`;
+
+export { StyledMenu, StyledUl, StyledTitle, StyledLi, StyledLink };

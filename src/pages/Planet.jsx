@@ -1,6 +1,7 @@
 import { v4 } from 'uuid';
 import { PLANETS_INFO } from '../constants/planetsInfo';
 import {
+	StyledContainerPlanetInfo,
 	StyledHiddenImage,
 	StyledPlanet,
 	StyledPlanetButton,
@@ -18,47 +19,48 @@ import {
 	StyledWikipedia
 } from './styles';
 import { useState } from 'react';
-import { TABS_COLORS } from '../constants/designValues';
 
 const Planet = ({ planet }) => {
 	const [info, setInfo] = useState(0);
-	const [lastImage, setLastImage] = useState(false);
+
 	return (
 		<StyledPlanet>
 			<StyledPlanetContent>
-				<StyledPlanetContainerImage>
-					<img src={PLANETS_INFO[planet].images[info]} alt='' />
-					<StyledHiddenImage visibility={lastImage}>
-						<img src={PLANETS_INFO[planet].images[3]} alt='' />
-					</StyledHiddenImage>
-				</StyledPlanetContainerImage>
-				<StyledPlanetContainerInfo>
-					<div>
-						<StyledPlanetName>
-							{PLANETS_INFO[planet].planetName}
-						</StyledPlanetName>
-						<StyledPlanetInfo>
-							{PLANETS_INFO[planet].texts[info]}
-						</StyledPlanetInfo>
-						<StyledSpan>
-							Source: <StyledWikipedia>Wikipedia</StyledWikipedia>
-						</StyledSpan>
-					</div>
-					<StyledPlanetTabs>
-						{PLANETS_INFO[planet].tabs.map((tab, index) => (
-							<StyledPlanetButton
-								key={v4()}
-								onClick={() =>
-									changeIndexInfo(setInfo, index, setLastImage, lastImage)
-								}
-								$active={index === info}
-								$color={TABS_COLORS[planet]}
-							>
-								{tab}
-							</StyledPlanetButton>
-						))}
-					</StyledPlanetTabs>
-				</StyledPlanetContainerInfo>
+				<StyledContainerPlanetInfo>
+					<StyledPlanetContainerImage>
+						<img src={PLANETS_INFO[planet].images[info]} alt='' />
+						<StyledHiddenImage>
+							{info === 2 && (
+								<img src={PLANETS_INFO[planet].images[3]} alt='' />
+							)}
+						</StyledHiddenImage>
+					</StyledPlanetContainerImage>
+					<StyledPlanetContainerInfo>
+						<div>
+							<StyledPlanetName>
+								{PLANETS_INFO[planet].planetName}
+							</StyledPlanetName>
+							<StyledPlanetInfo>
+								{PLANETS_INFO[planet].texts[info]}
+							</StyledPlanetInfo>
+							<StyledSpan>
+								Source: <StyledWikipedia>Wikipedia</StyledWikipedia>
+							</StyledSpan>
+						</div>
+						<StyledPlanetTabs>
+							{PLANETS_INFO[planet].tabs.map((tab, index) => (
+								<StyledPlanetButton
+									key={v4()}
+									onClick={() => changeIndexInfo(setInfo, index)}
+									$active={index === info}
+									$color={PLANETS_INFO[planet].$color}
+								>
+									{tab}
+								</StyledPlanetButton>
+							))}
+						</StyledPlanetTabs>
+					</StyledPlanetContainerInfo>
+				</StyledContainerPlanetInfo>
 			</StyledPlanetContent>
 			<StyledPlanetStats>
 				{PLANETS_INFO[planet].stats.map(item => (
@@ -72,13 +74,8 @@ const Planet = ({ planet }) => {
 	);
 };
 
-const changeIndexInfo = (setInfo, index, setLastImage, lastImage) => {
+const changeIndexInfo = (setInfo, index) => {
 	setInfo(index);
-	if (index === 2) {
-		setLastImage(!lastImage);
-	} else {
-		setLastImage(false);
-	}
 };
 
 export default Planet;
