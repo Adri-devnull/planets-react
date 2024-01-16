@@ -1,4 +1,3 @@
-import { PLANETS_MENU } from '../../constants/planetsInfo';
 import {
 	StyledLi,
 	StyledLink,
@@ -7,6 +6,7 @@ import {
 	StyledUl
 } from './styles';
 import { TABS_COLORS } from '../../constants/designValues';
+import { PLANETS_MENU } from '../../constants/menu';
 
 const Menu = () => {
 	return (

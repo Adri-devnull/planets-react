@@ -1,4 +1,3 @@
-import { v4 } from 'uuid';
 import { PLANETS_INFO } from '../constants/planetsInfo';
 import {
 	StyledContainerPlanetInfo,
@@ -19,6 +18,7 @@ import {
 	StyledWikipedia
 } from './styles';
 import { useState } from 'react';
+import { TABS_INFO } from '../constants/tabsInfo';
 
 const Planet = ({ planet }) => {
 	const [info, setInfo] = useState(0);
@@ -48,14 +48,14 @@ const Planet = ({ planet }) => {
 							</StyledSpan>
 						</div>
 						<StyledPlanetTabs>
-							{PLANETS_INFO[planet].tabs.map((tab, index) => (
+							{TABS_INFO.map((tab, index) => (
 								<StyledPlanetButton
-									key={v4()}
+									key={tab.id}
 									onClick={() => changeIndexInfo(setInfo, index)}
 									$active={index === info}
 									$color={PLANETS_INFO[planet].$color}
 								>
-									{tab}
+									{tab.name}
 								</StyledPlanetButton>
 							))}
 						</StyledPlanetTabs>

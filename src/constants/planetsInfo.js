@@ -1,47 +1,4 @@
-import { v4 } from 'uuid';
-
-export const PLANETS_MENU = [
-	{
-		id: v4(),
-		name: 'MERCURY',
-		route: '/'
-	},
-	{
-		id: v4(),
-		name: 'VENUS',
-		route: '/venus'
-	},
-	{
-		id: v4(),
-		name: 'EARTH',
-		route: '/earth'
-	},
-	{
-		id: v4(),
-		name: 'MARS',
-		route: '/mars'
-	},
-	{
-		id: v4(),
-		name: 'JUPITER',
-		route: '/jupiter'
-	},
-	{
-		id: v4(),
-		name: 'SATURN',
-		route: '/saturn'
-	},
-	{
-		id: v4(),
-		name: 'URANUS',
-		route: '/uranus'
-	},
-	{
-		id: v4(),
-		name: 'NEPTUNE',
-		route: '/neptune'
-	}
-];
+import { PLANET_COLORS } from '../styles/colors';
 
 const MERCURY = {
 	planetName: 'MERCURY',
@@ -56,14 +13,13 @@ const MERCURY = {
 		`Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density.`,
 		`Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.`
 	],
-	tabs: ['01 OVERVIEW', '02 INTERNAL STRUCTURE', '03 SURFACE GEOLOGY'],
 	stats: [
 		{ props: 'ROTATION TIME', value: '58.6 DAYS' },
 		{ props: 'REVOLUTION TIME', value: '87.97 DAYS' },
 		{ props: 'RADIUS', value: '2,439.7 KM' },
 		{ props: 'AVERAGE TEMP.', value: '430°C' }
 	],
-	$color: '#419EBB'
+	$color: PLANET_COLORS.MERCURY
 };
 
 const VENUS = {
@@ -79,14 +35,13 @@ const VENUS = {
 		`The similarity in size and density between Venus and Earth suggests they share a similar 02 INTERNAL STRUCTURE: a core, mantle, and crust. Like that of Earth, Venusian core is most likely at least partially liquid because the two planets have been cooling at about the same rate.`,
 		`Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii.`
 	],
-	tabs: ['01 OVERVIEW', '02 INTERNAL STRUCTURE', '03 SURFACE GEOLOGY'],
 	stats: [
 		{ props: 'ROTATION TIME', value: '243 DAYS' },
 		{ props: 'REVOLUTION TIME', value: '224.7 DAYS' },
 		{ props: 'RADIUS', value: '6,051.8 KM' },
 		{ props: 'AVERAGE TEMP.', value: '471°C' }
 	],
-	$color: '#EDA249'
+	$color: PLANET_COLORS.VENUS
 };
 
 const EARTH = {
@@ -102,14 +57,13 @@ const EARTH = {
 		`Earth's interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle.`,
 		`The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.`
 	],
-	tabs: ['01 OVERVIEW', '02 INTERNAL STRUCTURE', '03 SURFACE GEOLOGY'],
 	stats: [
 		{ props: 'ROTATION TIME', value: '0.99 DAYS' },
 		{ props: 'REVOLUTION TIME', value: '365.26 DAYS' },
 		{ props: 'RADIUS', value: '6,371 KM' },
 		{ props: 'AVERAGE TEMP.', value: '16°C' }
 	],
-	$color: '#6D2ED5'
+	$color: PLANET_COLORS.EARTH
 };
 
 const MARS = {
@@ -125,14 +79,13 @@ const MARS = {
 		`Like Earth, Mars has differentiated into a dense metallic core overlaid by less dense materials. Scientists initially determined that the core is at least partially liquid. Current models of its interior imply a core consisting primarily of iron and nickel with about 16–17% sulfur.`,
 		`Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.`
 	],
-	tabs: ['01 OVERVIEW', '02 INTERNAL STRUCTURE', '03 SURFACE GEOLOGY'],
 	stats: [
 		{ props: 'ROTATION TIME', value: '1.03 DAYS' },
 		{ props: 'REVOLUTION TIME', value: '1.88 YEARS' },
 		{ props: 'RADIUS', value: '3,389.5 KM' },
 		{ props: 'AVERAGE TEMP.', value: '−28°C' }
 	],
-	$color: '#D14C32'
+	$color: PLANET_COLORS.MARS
 };
 
 const JUPITER = {
@@ -148,14 +101,13 @@ const JUPITER = {
 		`When the Juno arrived in 2016, it found that Jupiter has a very diffuse core that mixes into its mantle. A possible cause is an impact from a planet of about ten Earth masses a few million years after Jupiter's formation, which would have disrupted an originally solid Jovian core.`,
 		`The best known feature of Jupiter is the Great Red Spot, a persistent anticyclonic storm located 22° south of the equator. It is known to have existed since at least 1831, and possibly since 1665.`
 	],
-	tabs: ['01 OVERVIEW', '02 INTERNAL STRUCTURE', '03 SURFACE GEOLOGY'],
 	stats: [
 		{ props: 'ROTATION TIME', value: '9.93 HOURS' },
 		{ props: 'REVOLUTION TIME', value: '11.86 YEARS' },
 		{ props: 'RADIUS', value: '69,911 KM' },
 		{ props: 'AVERAGE TEMP.', value: '-108°C' }
 	],
-	$color: '#D83A34'
+	$color: PLANET_COLORS.JUPITER
 };
 
 const SATURN = {
@@ -171,14 +123,13 @@ const SATURN = {
 		`Despite consisting mostly of hydrogen and helium, most of Saturn's mass is not in the gas phase, because hydrogen becomes a non-ideal liquid when the density is above 0.01 g/cm3, which is reached at a radius containing 99.9% of Saturn's mass.`,
 		`The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles with a smaller amount of rocky debris and dust. `
 	],
-	tabs: ['01 OVERVIEW', '02 INTERNAL STRUCTURE', '03 SURFACE GEOLOGY'],
 	stats: [
 		{ props: 'ROTATION TIME', value: '10.8 HOURS' },
 		{ props: 'REVOLUTION TIME', value: '29.46 YEARS' },
 		{ props: 'RADIUS', value: '58,232 KM' },
 		{ props: 'AVERAGE TEMP.', value: '-138°C' }
 	],
-	$color: '#CD5120'
+	$color: PLANET_COLORS.SATURN
 };
 
 const URANUS = {
@@ -194,14 +145,13 @@ const URANUS = {
 		`The standard model of Uranus's structure is that it consists of three layers: a rocky (silicate/iron–nickel) core in the centre, an icy mantle in the middle and an outer gaseous hydrogen/helium envelope. The core is relatively small, with a mass of only 0.55 Earth masses.`,
 		`The composition of Uranus's atmosphere is different from its bulk, consisting mainly of molecular hydrogen and helium. The helium molar fraction, i.e. the number of helium atoms per molecule of gas, is 0.15±0.03 in the upper troposphere.`
 	],
-	tabs: ['01 OVERVIEW', '02 INTERNAL STRUCTURE', '03 SURFACE GEOLOGY'],
 	stats: [
 		{ props: 'ROTATION TIME', value: '17.2 HOURS' },
 		{ props: 'REVOLUTION TIME', value: '84 YEARS' },
 		{ props: 'RADIUS', value: '25,362 KM' },
 		{ props: 'AVERAGE TEMP.', value: '-195°C' }
 	],
-	$color: '#1EC1A2'
+	$color: PLANET_COLORS.URANUS
 };
 
 const NEPTUNE = {
@@ -217,14 +167,13 @@ const NEPTUNE = {
 		`Neptune's internal structure resembles that of Uranus. Its atmosphere forms about 5% to 10% of its mass and extends perhaps 10% to 20% of the way towards the core. Increasing concentrations of methane, ammonia and water are found in the lower regions.`,
 		`Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in the red and infrared portion of the spectrum.`
 	],
-	tabs: ['01 OVERVIEW', '02 INTERNAL STRUCTURE', '03 SURFACE GEOLOGY'],
 	stats: [
 		{ props: 'ROTATION TIME', value: '16.08 HOURS' },
 		{ props: 'REVOLUTION TIME', value: '164.79 YEARS' },
 		{ props: 'RADIUS', value: '24,622 KM' },
 		{ props: 'AVERAGE TEMP.', value: '-201°C' }
 	],
-	$color: '#2D68F0'
+	$color: PLANET_COLORS.NEPTUNE
 };
 
 export const PLANETS_INFO = {

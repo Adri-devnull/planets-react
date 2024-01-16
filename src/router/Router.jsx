@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Planet from '../pages/Planet';
-import { PLANETS_MENU } from '../constants/planetsInfo';
+import { PLANETS_MENU } from '../constants/menu';
 
 const Router = () => {
 	return (
